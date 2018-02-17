@@ -473,3 +473,8 @@
   word-spacing: 0.7rem;
   line-height: 4;
 }
+
+h5.article-content{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
