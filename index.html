@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/lib.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 
 <body>
@@ -60,13 +61,11 @@
         </div>
 
 
-
-            <div class="mb-5">
-                <!-- Trigger -->
-                <button type="button" class="btn btn-primary btn-pill btn-lg d-table ml-auto mr-auto" data-toggle="modal" data-target="#exampleModal">
-                    ✋ Click Me!
-                </button>
-
+        <div class="row">
+            <div class="col-md-12 text-center">
+                    <i class="fa fa-thumbs-up fa-4x" id="onvote"></i>
+            </div>
+        </div>
 
 <!-- footer -->
     <footer class="main-footer py-5">
@@ -81,7 +80,7 @@
                 <span class="sr-only">View our Facebook Profile <span>
             </a>
             <a class="github mx-3 h4" href="" target="_blank">
-                <i class="fa fa-instagram"></i>
+                
                 <span class="sr-only">View our Instagram Profile</span>
             </a>
         </div>
@@ -94,6 +93,13 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 <script src="js/lib.min.js"></script>
 <script src="js/main.js"></script>
-
+<script>
+    $('#onvote').click(function(){
+        $('#onvote').addClass('animated tada');   
+        setTimeout(function(){
+            $('#onvote').removeClass('animated tada');
+            }, 1500);     
+    });
+</script>
 </body>
 </html>

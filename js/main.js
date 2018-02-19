@@ -82,7 +82,7 @@
       $('.slide-in').each(function() {
         $(this).addClass('visible');
       });
-    }, 1900);
+    }, 0);
 
     // Enable popovers everywhere.
     $('[data-toggle="popover"]').popover();
