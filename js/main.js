@@ -72,7 +72,7 @@
  * Shards — Main demo page script.
  */
 
-// Main demo script.
+// Main  script.
 (function ($) {
   $(document).ready(function() {
 
@@ -107,3 +107,4 @@
 /***/ })
 
 /******/ });
+
