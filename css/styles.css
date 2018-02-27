@@ -537,3 +537,7 @@ h5.article-content{
   height: auto;
   max-width: 100%;
 }
+
+.searchbar{
+  background-color: #17C671!important;
+}
