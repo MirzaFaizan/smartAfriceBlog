@@ -549,3 +549,8 @@ h5.article-content{
 .special-container{
   background-color: #708090;
 }
+
+.job-image{
+  max-width: 70%;
+  width: auto;
+}
