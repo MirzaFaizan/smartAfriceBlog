@@ -24,25 +24,78 @@
     <!-- Content -->
     <div class="content clearfix">
 
-        <!-- articles -->
+        <!-- Main Section for  -->
         <div class="container">
             <section class="row" id="slider">
-                <div class="owl-carousel owl-theme">
-                    <div class="item"><h4>1</h4></div>
-                    <div class="item"><h4>2</h4></div>
-                    <div class="item"><h4>3</h4></div>
-                    <div class="item"><h4>4</h4></div>
-                    <div class="item"><h4>5</h4></div>
-                    <div class="item"><h4>6</h4></div>
-                    <div class="item"><h4>7</h4></div>
-                    <div class="item"><h4>8</h4></div>
-                    <div class="item"><h4>9</h4></div>
-                    <div class="item"><h4>10</h4></div>
-                    <div class="item"><h4>11</h4></div>
-                    <div class="item"><h4>12</h4></div>
+                <div id="fullscreen-slides" class="fs-slides owl-carousel">
+                    <div class="owl-item">
+                        <div class="container">
+                              okay
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        Another one
+                    </div>
+                    <div class="owl-item">
+                            Another one
+                    </div>
                 </div>
-            </section>    
+            </section>
+
+            <!-- Articles section -->
+            <section class="row">
+                    <div class="card container mt-5 mb-5">
+                        <h3 class="text-muted mt-3"> Articles</h3>
+                            <div class="col-md-6">
+                                    <div class="row pb-5">
+                                            <div id="fullscreen-slides" class="fs-slides owl-carousel">
+                                                    <div class="owl-item">
+                                                        <div class="container">
+                                                              okay
+                                                        </div>
+                                                    </div>
+                                                    <div class="owl-item">
+                                                        Another one
+                                                    </div>
+                                                    <div class="owl-item">
+                                                            Another one
+                                                    </div>
+                                                </div>          
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                
+                                </div>
+                    </div>
+                </section>
+                <!-- Job section -->
+                <section class="row">
+                        <div class="card container mt-5 mb-5">
+                            <h3 class="text-muted mt-3"> Latest Jobs</h3>
+                                <div class="col-md-6">
+                                        <div class="row pb-5">
+                                                <div id="fullscreen-slides" class="fs-slides owl-carousel">
+                                                        <div class="owl-item">
+                                                            <div class="container">
+                                                                  okay
+                                                            </div>
+                                                        </div>
+                                                        <div class="owl-item">
+                                                            Another one
+                                                        </div>
+                                                        <div class="owl-item">
+                                                                Another one
+                                                        </div>
+                                                    </div>          
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                            
+                                    </div>
+                        </div>
+                    </section>    
         </div>
+        <!-- first section e.g articles -->
 
         <div class="row mb-5">
             <div class="col-md-12 text-center">
@@ -91,22 +144,50 @@
 <script src="js/main.js"></script>
 <script src="plugins/owl.carousel.js"></script>
 <script>
-        $('.owl-carousel').owlCarousel({
-      loop:true,
-      margin:10,
-      nav:true,
-      responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:3
-          },
-          1000:{
-              items:5
-          }
-      }
+function centerSlideImages( event ) {
+	var $slide = $(event.target);
+	var $conts = $slide.find('.owl-item');
+	$conts.each(function() {
+		var img = $(this).children('img');
+		var conRatio = $(this).width() / $(this).height();
+		var imgRatio = img.width() / img.height();
+		var mode = (conRatio > imgRatio) ? 'portrait' : 'landscape';
+		if( mode === 'portrait') {
+			$(this).removeClass('landscape');
+			$(this).addClass('portrait');
+			img.css({
+				marginTop: ($(this).height() - img.height()) / 2,
+				marginLeft: 0,
+			});
+		} else {
+			$(this).removeClass('portrait');
+			$(this).addClass('landscape');
+			img.css({
+				marginTop: 0,
+				marginLeft: ($(this).width() - img.width()) / 2,
+			});
+		};
+	});
+}
+
+$(window).on('load', function() {
+	$('.fs-slides').owlCarousel({
+    items: 1,
+    pullDrag: false,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    responsiveRefreshRate: 0,
+    onInitialized: function(event) {
+      centerSlideImages(event);
+    },
+    onResized: function(event) {
+      centerSlideImages(event);
+    },
   });
+});
 </script>
 </body>
 </html>
