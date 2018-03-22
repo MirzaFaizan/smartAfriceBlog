@@ -561,7 +561,7 @@ h5.article-content{
 .owl-dot.active span{opacity:1}
 .owl-dots.disabled,.owl-nav.disabled{display:none}
 
-.fs-slides {
+.owl-carousel {
 	position: relative;
 	top: 0;
 	left: 0;
@@ -569,13 +569,8 @@ h5.article-content{
 	bottom: 0;
 }
 
-.fs-slides .owl-stage-outer,
-.fs-slides .owl-stage,
-.fs-slides .owl-item {
+.owl-stage-outer,
+.owl-stage,
+.owl-item {
   height: 50vh;
-}
-
-.fs-slides .owl-item {
-  overflow: hidden;
-  background-color: #212529;
 }

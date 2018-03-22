@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Article Grid 📌</title>
+    <title>Landing Page</title>
     <meta name="description" content="Testing cards">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -27,19 +27,79 @@
         <!-- Main Section for  -->
         <div class="container">
             <section class="row" id="slider">
-                <div id="fullscreen-slides" class="fs-slides owl-carousel">
-                    <div class="owl-item">
-                        <div class="container">
-                              okay
-                        </div>
-                    </div>
-                    <div class="owl-item">
-                        Another one
-                    </div>
-                    <div class="owl-item">
-                            Another one
-                    </div>
-                </div>
+                <div id="owl-main" class="owl-carousel height-md owl-inner-nav owl-ui-lg">
+					
+					<div class="item" style="background-image: url(images/1.jpg);">
+						<div class="container">
+							<div class="caption vertical-center text-center">
+								
+								<h1 class="text-white">Made for Designers</h1>
+								<p class="fadeInDown-2 medium-color">Create your online portfolio in minutes with the professionally and lovingly designed REEN website template. Customize your site with versatile and easy to use features.</p>
+								<div class="fadeInDown-3">
+									<a href="#" class="btn btn-large">Get started now</a>
+								</div><!-- /.fadeIn -->
+								
+							</div><!-- /.caption -->
+						</div><!-- /.container -->
+					</div><!-- /.item -->
+					
+					<div class="item" style="background-image: url(images/2.jpg);">
+						<div class="container">
+							<div class="caption vertical-center text-right">
+								
+								<h1 class="fadeInLeft-1 light-color">Fresh and <br>beautiful design</h1>
+								<p class="fadeInLeft-2 light-color">REEN is designed to showcase your talent and put your work in the forefront. <br>Professionally use of typography and layout that fits your content.</p>
+								<div class="fadeInLeft-3">
+									<a href="#" class="btn btn-large">Get started now</a>
+								</div><!-- /.fadeIn -->
+								
+							</div><!-- /.caption -->
+						</div><!-- /.container -->
+					</div><!-- /.item -->
+					
+					<div class="item" style="background-image: url(images/3.jpg);">
+						<div class="container">
+							<div class="caption vertical-center text-left">
+								
+								<h1 class="fadeInRight-1 dark-bg light-color"><span>Clean and <br>reusable code</span></h1>
+								<p class="fadeInRight-2 dark-color">The clean code allows you to easily copy code blocks from content <br>modules and past them in different places or layouts.</p>
+								<div class="fadeInRight-3">
+									<a href="#" class="btn btn-large">Get started now</a>
+								</div><!-- /.fadeIn -->
+								
+							</div><!-- /.caption -->
+						</div><!-- /.container -->
+					</div><!-- /.item -->
+					
+					<div class="item" style="background-image: url(images/4.jpg);">
+						<div class="container">
+							<div class="caption vertical-top text-right">
+								
+								<h1 class="fadeIn-1 dark-bg light-color"><span>Just focus on <br>your creativity</span></h1>
+								<p class="fadeIn-2 light-color">Take a break from messing around with heavy coding and spend <br>your time brainstorming ideas for your next project.</p>
+								<div class="fadeIn-3">
+									<a href="#" class="btn btn-large">Get started now</a>
+								</div><!-- /.fadeIn -->
+								
+							</div><!-- /.caption -->
+						</div><!-- /.container -->
+					</div><!-- /.item -->
+					
+					<div class="item" style="background-image: url(http://demo.fuviz.com/reen/v1-5/assets/images/art/slider05.jpg);">
+						<div class="container">
+							<div class="caption vertical-top text-center">
+								
+								<h1 class="fadeInDown-1 light-color">Showcase <br>your content</h1>
+								<p class="fadeInDown-2 medium-color">With REEN you have the possibility to create websites for various <br>contents quickly and easily. Now it's up to you!</p>
+								<div class="fadeInDown-3">
+									<a href="#" class="btn btn-large">Get started now</a>
+								</div><!-- /.fadeIn -->
+								
+							</div><!-- /.caption -->
+						</div><!-- /.container -->
+					</div><!-- /.item -->
+					
+				</div><!-- /.owl-carousel -->
             </section>
 
             <!-- Articles section -->
@@ -171,7 +231,7 @@ function centerSlideImages( event ) {
 }
 
 $(window).on('load', function() {
-	$('.fs-slides').owlCarousel({
+	$('.owl-carousel').owlCarousel({
     items: 1,
     pullDrag: false,
     loop: true,
