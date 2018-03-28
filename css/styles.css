@@ -574,3 +574,16 @@ h5.article-content{
 .owl-item {
   height: 50vh;
 }
+
+.text-images{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.relative{
+  position: relative;
+  color: white;
+  font-weight: 200;
+}
