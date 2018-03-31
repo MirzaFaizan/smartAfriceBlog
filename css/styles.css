@@ -550,6 +550,8 @@ h5.article-content{
   background-color: #708090;
 }
 
+
+
 .job-image{
   max-width: 70%;
   width: auto;
@@ -584,6 +586,11 @@ h5.article-content{
 
 .relative{
   position: relative;
-  color: white;
+  color: white; 
   font-weight: 200;
+}
+/* For Buy Sell LIST */
+
+.special-container-grey{
+  background-color: #DCDCDC;
 }
